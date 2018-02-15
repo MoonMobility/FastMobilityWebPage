@@ -67,12 +67,6 @@ body {
     background-color:rgba(37,165,82,1);
 }
 
-.bottom-left{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-}
-
 .footer {
   position: absolute;
   bottom: 0;
