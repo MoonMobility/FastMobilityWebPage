@@ -1,3 +1,11 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
 .content:before {
   content: "";
   position: fixed;
@@ -7,16 +15,16 @@
 
   display: block;
   background:
-    linear-gradient(rgba(100,181,246 ,0.5), rgba(0,0,0,0.8)),
+    linear-gradient(rgba(100,181,246 ,0.45), rgba(0,0,0,0.75)),
     url("../img/bg.jpg")  center center no-repeat;
   height: 110%;
   background-size:cover;
 
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
 
   margin-left: -15px;
   margin-right:  -15px;
@@ -63,6 +71,13 @@
     position: fixed;
     bottom: 0;
     left: 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
 }
 
 /* .grecaptcha-badge {
