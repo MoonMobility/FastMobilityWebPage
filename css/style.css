@@ -50,9 +50,6 @@
     text-align: center;
     margin-top: 15px;
 }
-#signup .form-inline {
-    display: block;
-}
 
 #signup .btn {
     background-color: rgba(86,204,242,0.75);
@@ -62,9 +59,11 @@
     background-color:rgba(37,165,82,1);
 }
 
-.bottom-right{
-position: absolute;
-bottom: 0;
-right: 0;
-
+.bottom-left{
+    position: absolute;
+    bottom: 0;
 }
+
+/* .grecaptcha-badge {
+   display: none;
+} */
