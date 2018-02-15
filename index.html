@@ -70,13 +70,13 @@
       <section id="signup">
         <div class="container">
 
-          <form role="form" method="post" action="#signup">
+          <form id="contact-form" role="form" method="post" action="#signup">
             <div class="form-row justify-content-center align-items-center">
               <div class="col-auto">
-                <input type="email" class="form-control form-control-sm" name="email" placeholder="enter your email">
+                <input type="email" class="form-control form-control-sm" name="email" placeholder="enter your email"  required="required" data-error="Lastname is required.">
               </div>
               <div class="col-auto">
-                <button type="submit" class="btn btn-signup btn-sm g-recaptcha" name="submit" value="send" data-sitekey="6LdFa0YUAAAAALQUDAkrcTQShUfpXAI6iKfCni7h" data-callback="YourOnSubmitFn">find out more</button>
+                <button type="submit" class="btn btn-signup btn-sm !g-recaptcha" name="submit" value="send" data-sitekey="6LdFa0YUAAAAALQUDAkrcTQShUfpXAI6iKfCni7h" data-callback="YourOnSubmitFn">find out more</button>
               </div>
             </div>
           </form>
@@ -119,6 +119,9 @@
   <script type="text/javascript" src="js/jquery.countdown.js"></script>
 
   <script src='https://www.google.com/recaptcha/api.js'></script>
+
+  <script src="validator.js"></script>
+  <script src="contact.js"></script>
 
   <script>
     $(function() {
