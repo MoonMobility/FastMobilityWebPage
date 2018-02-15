@@ -3,7 +3,7 @@ html {
   min-height: 100%;
 }
 body {
-  margin-bottom: 60px; /* Margin bottom by footer height */
+  margin-bottom: 67px; /* Margin bottom by footer height */
 }
 
 .content:before {
@@ -71,7 +71,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60px; /* Set the fixed height of the footer here */
+  height: 67px; /* Set the fixed height of the footer here */
 }
 
 /* .grecaptcha-badge {
