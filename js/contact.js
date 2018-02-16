@@ -15,7 +15,7 @@ $(function () {
 
             var url = "https://formspree.io/mobilitymoon@gmail.com";
 
-            $.ajax({
+            var jqxhr = $.ajax({
                 type: "POST",
                 url: url,
                 data: $(this).serialize(),
@@ -30,7 +30,12 @@ $(function () {
                         $('#contact-form')[0].reset();
                       }
                 }
-            });
+            })
+            .success(function() { alert("Успешное выполнение"); })
+            .error(function() { alert("Ошибка выполнения"); })
+            .complete(function() { alert("Завершение выполнения"); });
+
+
             return false;
         }
     })
