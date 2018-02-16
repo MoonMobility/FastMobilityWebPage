@@ -1,10 +1,19 @@
 $(function () {
 
-    $('#contact-form').validator();
-
     $('#contact-form').on('submit', function (e) {
         if (!e.isDefaultPrevented()) {
-            var url = "contact.php";
+
+          // var messageAlert = 'alert-' + $(this).type;
+          //             var messageText = $(this).email;
+          //
+          //             var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+          //             if (messageAlert && messageText) {
+          //                 $('#contact-form').find('.messages').html(alertBox);
+          //                 $('#contact-form')[0].reset();
+          //               }
+
+
+            var url = "https://formspree.io/mobilitymoon@gmail.com";
 
             $.ajax({
                 type: "POST",
@@ -13,14 +22,13 @@ $(function () {
                 success: function (data)
                 {
                     var messageAlert = 'alert-' + data.type;
-                    var messageText = data.message;
+                    var messageText = data.email;
 
                     var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
                     if (messageAlert && messageText) {
                         $('#contact-form').find('.messages').html(alertBox);
                         $('#contact-form')[0].reset();
-                        grecaptcha.reset();
-                    }
+                      }
                 }
             });
             return false;
